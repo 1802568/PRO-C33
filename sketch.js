@@ -68,6 +68,11 @@ text ("Score : "+score,20,30);
      particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
      score++
    }
+  if(frameCount%1000===0){
+    particles.destroy()
+    plinkos.destroy()
+    text("gameover",400,400)
+  }
  
   for (var j = 0; j < particles.length; j++) {
    
